@@ -19,7 +19,7 @@ using namespace std;
 
 
 // --------------count sort function---------------------
-
+/*
 void countSort(int arr[],int n){
     int maxnum=0;
     for(int i=0;i<n;i++){
@@ -38,26 +38,58 @@ void countSort(int arr[],int n){
     }
 }
 
-
-
-
-
 //--------------- print array--------------------
 
 void printArr(auto arr,int len){
     for(int i=0;i<len;i++)
         cout<<"  "<<arr[i];
 }
+*/
 
 
+
+//-------------------------------------------check pangram in string--------------------------------------------------------------
+
+bool checkPangram (string str){
+    vector<bool> mark(26,false);
+     int index;
+     for (int i=0;i<str.length();i++){
+         if('A'<=str[i] && str[i]<='Z'){
+             index = str[i]-'A';
+         }
+         else if('a'<=str[i] && str[i]<='z'){
+             index = str[i]-'a';
+         }
+         else
+             continue;
+         cout<<endl<<"before i : "<<i;
+         cout<<endl<<"before str[i] : "<<str[i];
+         cout<<endl<<"after index : "<<index;
+         mark[index]=true;
+
+     }
+     cout<<"\n---------------------------";
+     char s;
+     for (int i=0; i<=25;i++) {
+         if (mark[i] == false)
+         {
+             s= i+'a';
+
+             cout<<"//////////////////   "<<s <<"    //////////\n";
+             return (false);
+         }
+
+     }
+     return (true);
+}
 //--------------------main function-----------------
 
 int main(){
-
-    int arr[] = {2,4,3,7,1,2};
-    int n = sizeof (arr)/sizeof (arr[0]);
-    countSort(arr,n);
-    printArr(arr,n);
+    string str = "bhavin hello world";
+    if(checkPangram(str)==true)
+        cout<<"string is a pangram";
+    else
+        cout<<"string is not a pangram";
     return 0;
 
 }
