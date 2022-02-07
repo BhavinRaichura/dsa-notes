@@ -50,6 +50,16 @@ void printArr(auto arr,int len){
 
 //-------------------------------------------check pangram in string--------------------------------------------------------------
 
+/* Pangron string */
+
+/* Pangram string is an string which includes all alphabates.
+ *
+ *
+ *
+ *
+ *
+ *
+ * */
 bool checkPangram (string str){
     vector<bool> mark(26,false);
      int index;
@@ -75,7 +85,7 @@ bool checkPangram (string str){
              s+= i+'a';
          }
      }
-     cout<<"\n--------------------------messing charactors--------------\n";
+     cout<<"\n-messing charactors-\n";
 
      for(int i=0; i<s.length();i++)
          cout<<s[i]<<"  ";
