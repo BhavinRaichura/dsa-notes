@@ -66,22 +66,25 @@ bool checkPangram (string str){
          cout<<endl<<"before str[i] : "<<str[i];
          cout<<endl<<"after index : "<<index;
          mark[index]=true;
-
      }
-     cout<<"\n---------------------------";
-     char s;
+
+     string s="";
      for (int i=0; i<=25;i++) {
          if (mark[i] == false)
          {
-             s= i+'a';
-
-             cout<<"//////////////////   "<<s <<"    //////////\n";
-             return (false);
+             s+= i+'a';
          }
-
      }
+     cout<<"\n--------------------------messing charactors--------------\n";
+
+     for(int i=0; i<s.length();i++)
+         cout<<s[i]<<"  ";
+     cout<<endl;
      return (true);
 }
+
+
+
 //--------------------main function-----------------
 
 int main(){
