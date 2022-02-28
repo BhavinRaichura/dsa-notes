@@ -90,7 +90,10 @@ bool checkPangram (string str){
      for(int i=0; i<s.length();i++)
          cout<<s[i]<<"  ";
      cout<<endl;
-     return (true);
+     if(s.length()>0)
+     return (false);
+     else
+         return (true);
 }
 
 
@@ -99,10 +102,13 @@ bool checkPangram (string str){
 
 int main(){
     string str = "bhavin hello world";
-    if(checkPangram(str)==true)
+    if(checkPangram(str)==true){
         cout<<"string is a pangram";
-    else
+    }
+    else{
         cout<<"string is not a pangram";
+    }
+
     return 0;
 
 }
